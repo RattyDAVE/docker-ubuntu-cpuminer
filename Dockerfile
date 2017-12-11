@@ -14,7 +14,10 @@ RUN		apt-get update && \
       cd cpuminer && \
       ./autogen.sh && \
       ./configure CFLAGS="-O3"  && \
-      make 
+      make && \      
+      apt-get -y autoclean && apt-get -y autoremove && \
+      apt-get -y purge $(dpkg --get-selections | grep deinstall | sed s/deinstall//g) && \
+      rm -rf /var/lib/apt/lists/*
 
 WORKDIR		/cpuminer
 ENTRYPOINT	["./minerd"]
