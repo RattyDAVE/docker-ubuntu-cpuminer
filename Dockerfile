@@ -1,7 +1,7 @@
 #
 # Dockerfile for cpuminer
-# usage: docker run creack/cpuminer --url xxxx --user xxxx --pass xxxx
-# ex: docker run creack/cpuminer --url stratum+tcp://ltc.pool.com:80 --user creack.worker1 --pass abcdef
+# usage: docker run rattydave/docker-ubuntu-cpuminer --url xxxx --user xxxx --pass xxxx
+# ex: docker run rattydave/docker-ubuntu-cpuminer --url stratum+tcp://ltc.pool.com:80 --user user1 --pass abcdef
 #
 #
 
